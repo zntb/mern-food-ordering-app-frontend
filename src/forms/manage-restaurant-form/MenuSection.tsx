@@ -1,15 +1,16 @@
-import { Button } from '@/components/ui/button.tsx';
-import { FormDescription, FormField, FormItem } from '@/components/ui/form.tsx';
+import { Button } from '@/components/ui/button';
+import { FormDescription, FormField, FormItem } from '@/components/ui/form';
 import { useFieldArray, useFormContext } from 'react-hook-form';
-import MenuItemInput from './MenuItemInput.tsx';
+import MenuItemInput from './MenuItemInput';
 
-function MenuSection() {
+const MenuSection = () => {
   const { control } = useFormContext();
 
   const { fields, append, remove } = useFieldArray({
     control,
     name: 'menuItems',
   });
+
   return (
     <div className="space-y-2">
       <div>
@@ -37,6 +38,6 @@ function MenuSection() {
       </Button>
     </div>
   );
-}
+};
 
 export default MenuSection;
