@@ -1,12 +1,12 @@
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 import {
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form.tsx';
-import { Input } from '@/components/ui/input.tsx';
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 import { useFormContext } from 'react-hook-form';
 
 type Props = {
@@ -16,6 +16,7 @@ type Props = {
 
 const MenuItemInput = ({ index, removeMenuItem }: Props) => {
   const { control } = useFormContext();
+
   return (
     <div className="flex flex-row items-end gap-2">
       <FormField
@@ -45,7 +46,7 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
               Price (£) <FormMessage />
             </FormLabel>
             <FormControl>
-              <Input {...field} placeholder="7.99" className="bg-white" />
+              <Input {...field} placeholder="8.00" className="bg-white" />
             </FormControl>
           </FormItem>
         )}
