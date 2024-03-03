@@ -7,6 +7,7 @@ import { Card, CardFooter } from '@/components/ui/card';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MenuItem as MenuItemType } from '../types';
+import CheckoutButton from '@/components/CheckoutButton';
 
 export type CartItem = {
   _id: string;
@@ -65,6 +66,11 @@ const DetailPage = () => {
         (item) => cartItem._id !== item._id
       );
 
+      sessionStorage.setItem(
+        `cartItems-${restaurantId}`,
+        JSON.stringify(updatedCartItems)
+      );
+
       return updatedCartItems;
     });
   };
@@ -101,7 +107,9 @@ const DetailPage = () => {
               cartItems={cartItems}
               removeFromCart={removeFromCart}
             />
-            <CardFooter></CardFooter>
+            <CardFooter>
+              <CheckoutButton disabled={cartItems.length === 0} />
+            </CardFooter>
           </Card>
         </div>
       </div>
