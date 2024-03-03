@@ -25,7 +25,7 @@ const HomePage = () => {
         />
       </div>
       <div className="grid md:grid-cols-2 gap-5">
-        <img src={landingImage} />
+        <img src={landingImage} alt="landing image" />
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <span className="font-bold text-3xl tracking-tighter">
             Order takeaway even faster!
@@ -34,7 +34,7 @@ const HomePage = () => {
             Download the MernEats App for faster ordering and personalised
             recommendations
           </span>
-          <img src={appDownloadImage} />
+          <img src={appDownloadImage} alt="app download image" />
         </div>
       </div>
     </div>

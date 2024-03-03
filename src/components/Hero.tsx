@@ -3,7 +3,11 @@ import hero from '../assets/hero.png';
 function Hero() {
   return (
     <div>
-      <img src={hero} className="w-full max-h-[600px] object-cover" />
+      <img
+        src={hero}
+        alt="Hero"
+        className="w-full max-h-[600px] object-cover"
+      />
     </div>
   );
 }
