@@ -5,13 +5,13 @@ import {
   SheetDescription,
   SheetTitle,
   SheetTrigger,
-} from './ui/sheet.tsx';
-import { Separator } from './ui/separator.tsx';
-import { Button } from './ui/button.tsx';
+} from './ui/sheet';
+import { Separator } from './ui/separator';
+import { Button } from './ui/button';
 import { useAuth0 } from '@auth0/auth0-react';
-import MobileNavLinks from './MobileNavLinks.tsx';
+import MobileNavLinks from './MobileNavLinks';
 
-function MobileNav() {
+const MobileNav = () => {
   const { isAuthenticated, loginWithRedirect, user } = useAuth0();
 
   return (
@@ -46,6 +46,6 @@ function MobileNav() {
       </SheetContent>
     </Sheet>
   );
-}
+};
 
 export default MobileNav;
